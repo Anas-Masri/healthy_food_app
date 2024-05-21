@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:healthy_food/view/screens/sign_up_screen.dart';
+import 'package:healthy_food/view/screens/authenticated_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const SignUpScreen(),
+      home: const AuthenticatedScreen(),
     );
   }
 }
