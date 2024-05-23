@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:healthy_food/view/screens/authenticated_screen.dart';
 import 'package:healthy_food/view/widgets/custom_button.dart';
 import 'package:healthy_food/view/widgets/custom_text_form_field.dart';
 
@@ -43,10 +44,17 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              const CustomButton(
+              CustomButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) {
+                        return const AuthenticatedScreen();
+                      },
+                    ));
+                  },
                   borderThikness: 1,
                   buttonLable: 'Log in',
-                  color: Color(0xffB6E5B9)),
+                  color: const Color(0xffB6E5B9)),
               const SizedBox(
                 height: 10,
               ),
